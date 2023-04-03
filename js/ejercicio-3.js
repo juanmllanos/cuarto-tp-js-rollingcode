@@ -57,17 +57,24 @@ function crearRectangulo() {
 };
 
 function calcularPerimetro() {
-	rectangulos[rectangulos.length-1].perimetro();
+	if (rectangulos.length) {
+		rectangulos[rectangulos.length - 1].perimetro();
+	} else alert('No creaste ningun rectangulo.');
+
 };
 
 function calcularArea() {
-	rectangulos[rectangulos.length-1].area();
+	if (rectangulos.length) {
+		rectangulos[rectangulos.length - 1].area();
+	} else alert('No creaste ningun rectangulo.');
 };
 
 function modificarRectangulo() {
-	const anchoNuevo = Number(prompt(`Cambiar ancho de ${rectangulos[rectangulos.length-1].ancho}cm por:`));
-	rectangulos[rectangulos.length-1].ancho = anchoNuevo;
-	const altoNuevo = Number(prompt(`Cambiar largo de ${rectangulos[rectangulos.length-1].alto}cm por:`));
-	rectangulos[rectangulos.length-1].alto = altoNuevo;
-	rectangulos[rectangulos.length-1].informacion();
+	if (rectangulos.length) {
+		const anchoNuevo = Number(prompt(`Cambiar ancho de ${rectangulos[rectangulos.length - 1].ancho}cm por:`));
+		rectangulos[rectangulos.length - 1].ancho = anchoNuevo;
+		const altoNuevo = Number(prompt(`Cambiar largo de ${rectangulos[rectangulos.length - 1].alto}cm por:`));
+		rectangulos[rectangulos.length - 1].alto = altoNuevo;
+		rectangulos[rectangulos.length - 1].informacion();
+	} else alert('No creaste ningun rectangulo.');
 };
