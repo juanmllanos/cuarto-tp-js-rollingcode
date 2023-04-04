@@ -1,5 +1,7 @@
 const $respuesta = document.querySelector('.resultados-ejer6');
 
+const biblioteca = [];
+
 function libroConMasPaginas() {
 	const arrayPaginas = biblioteca.map(libro => [libro.nroPaginas]);
 	const mayorPaginas = Math.max(...arrayPaginas);
